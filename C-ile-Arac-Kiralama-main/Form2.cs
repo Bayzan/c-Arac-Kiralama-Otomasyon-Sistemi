@@ -15,11 +15,14 @@ namespace Arac_kiralama
     public partial class Form2 : Form
     {
         private int kullaniciID;
+        private string uyeTipi; // "bireysel" veya "ticari"
 
-        public Form2(int kullaniciID)
+        public Form2(int kullaniciID, string uyeTipi)
         {
             InitializeComponent();
             this.kullaniciID = kullaniciID;
+            this.uyeTipi = uyeTipi;
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -185,7 +188,7 @@ namespace Arac_kiralama
 
         private void btn_geridon_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(kullaniciID);
+            Form3 form3 = new Form3(kullaniciID,uyeTipi);
             form3.Show();
             this.Hide();
         }

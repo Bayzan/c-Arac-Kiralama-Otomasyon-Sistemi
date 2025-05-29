@@ -69,6 +69,16 @@ namespace Arac_kiralama
             }
         }
 
+        private void btn_geriDon_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
 
+        private void btn_Cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); // Uygulamayı kapatır
+        }
     }
 }

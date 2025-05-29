@@ -21,12 +21,14 @@ namespace Arac_kiralama
 
         private void btn_GeriDon_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide(); // Mevcut formu gizle
         }
 
         private void btn_ÇikisYap_Click(object sender, EventArgs e)
         {
-
+            Application.Exit(); // Uygulamayı kapat
         }
 
         private void btn_uyeol_Click(object sender, EventArgs e)

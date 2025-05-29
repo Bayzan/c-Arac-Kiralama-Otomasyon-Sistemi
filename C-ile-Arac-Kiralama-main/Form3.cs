@@ -15,20 +15,24 @@ namespace Arac_kiralama
     public partial class Form3 : Form
     {
         int kullaniciID;
-        public Form3(int id)
+        string uyeTipi; // "bireysel" veya "ticari"
+
+        public Form3(int id, string tip)
         {
             InitializeComponent();
             kullaniciID = id;
+            uyeTipi = tip;
         }
-
         private void btn_sifredegistir_Click(object sender, EventArgs e)
         {
-
+            UyeSifreDegistirme sifreDegistir = new UyeSifreDegistirme(kullaniciID, uyeTipi);
+            sifreDegistir.Show();
+            this.Hide();
         }
 
         private void btn_arackirala_Click(object sender, EventArgs e)
         {
-            Form2 kirala = new Form2(kullaniciID);
+            Form2 kirala = new Form2(kullaniciID,uyeTipi);
             kirala.Show();
             this.Hide();
         }

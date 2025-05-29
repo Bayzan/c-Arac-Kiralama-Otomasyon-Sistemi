@@ -134,11 +134,23 @@
     <Compile Include="TicariUyeOl.Designer.cs">
       <DependentUpon>TicariUyeOl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uyeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uyeler.Designer.cs">
+      <DependentUpon>Uyeler.cs</DependentUpon>
+    </Compile>
     <Compile Include="UyeOlEkranıcs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UyeOlEkranıcs.Designer.cs">
       <DependentUpon>UyeOlEkranıcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeSifreDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeSifreDegistirme.Designer.cs">
+      <DependentUpon>UyeSifreDegistirme.cs</DependentUpon>
     </Compile>
     <Compile Include="Veritabanı.cs" />
     <Compile Include="Form1.cs">
@@ -173,6 +185,12 @@
     <Compile Include="YoneticiGirisEkranı.Designer.cs">
       <DependentUpon>YoneticiGirisEkranı.cs</DependentUpon>
     </Compile>
+    <Compile Include="YoneticiSifreDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiSifreDegistirme.Designer.cs">
+      <DependentUpon>YoneticiSifreDegistirme.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BireyselUyeOl.resx">
       <DependentUpon>BireyselUyeOl.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,8 +221,14 @@
     <EmbeddedResource Include="TicariUyeOl.resx">
       <DependentUpon>TicariUyeOl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uyeler.resx">
+      <DependentUpon>Uyeler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UyeOlEkranıcs.resx">
       <DependentUpon>UyeOlEkranıcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeSifreDegistirme.resx">
+      <DependentUpon>UyeSifreDegistirme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeniAracEkle.resx">
       <DependentUpon>YeniAracEkle.cs</DependentUpon>
@@ -217,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="YoneticiGirisEkranı.resx">
       <DependentUpon>YoneticiGirisEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiSifreDegistirme.resx">
+      <DependentUpon>YoneticiSifreDegistirme.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

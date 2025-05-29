@@ -133,6 +133,7 @@
             this.btn_geriDon.TabIndex = 16;
             this.btn_geriDon.Text = "Geri Dön";
             this.btn_geriDon.UseVisualStyleBackColor = true;
+            this.btn_geriDon.Click += new System.EventHandler(this.btn_geriDon_Click);
             // 
             // btn_Cikis
             // 
@@ -144,6 +145,7 @@
             this.btn_Cikis.TabIndex = 17;
             this.btn_Cikis.Text = "Çıkış Yap";
             this.btn_Cikis.UseVisualStyleBackColor = true;
+            this.btn_Cikis.Click += new System.EventHandler(this.btn_Cikis_Click);
             // 
             // YoneticiGiris
             // 

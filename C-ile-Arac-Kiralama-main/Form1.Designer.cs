@@ -39,18 +39,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Cikis = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Cik = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_giris
             // 
             this.btn_giris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_giris.Location = new System.Drawing.Point(58, 110);
+            this.btn_giris.Location = new System.Drawing.Point(46, 155);
             this.btn_giris.Margin = new System.Windows.Forms.Padding(2);
             this.btn_giris.Name = "btn_giris";
-            this.btn_giris.Size = new System.Drawing.Size(78, 26);
+            this.btn_giris.Size = new System.Drawing.Size(87, 27);
             this.btn_giris.TabIndex = 2;
             this.btn_giris.Text = "Giriş Yap";
             this.btn_giris.UseVisualStyleBackColor = true;
@@ -59,10 +61,10 @@
             // btn_uye
             // 
             this.btn_uye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_uye.Location = new System.Drawing.Point(212, 111);
+            this.btn_uye.Location = new System.Drawing.Point(213, 155);
             this.btn_uye.Margin = new System.Windows.Forms.Padding(2);
             this.btn_uye.Name = "btn_uye";
-            this.btn_uye.Size = new System.Drawing.Size(78, 26);
+            this.btn_uye.Size = new System.Drawing.Size(80, 27);
             this.btn_uye.TabIndex = 5;
             this.btn_uye.Text = "Üye Ol";
             this.btn_uye.UseVisualStyleBackColor = true;
@@ -72,7 +74,7 @@
             // 
             this.btn_Eposta.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_Eposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Eposta.Location = new System.Drawing.Point(21, 18);
+            this.btn_Eposta.Location = new System.Drawing.Point(22, 62);
             this.btn_Eposta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_Eposta.Name = "btn_Eposta";
             this.btn_Eposta.Size = new System.Drawing.Size(102, 27);
@@ -85,7 +87,7 @@
             this.txtEposta.BackColor = System.Drawing.Color.IndianRed;
             this.txtEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEposta.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEposta.Location = new System.Drawing.Point(152, 18);
+            this.txtEposta.Location = new System.Drawing.Point(153, 62);
             this.txtEposta.Margin = new System.Windows.Forms.Padding(2);
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.Size = new System.Drawing.Size(191, 26);
@@ -95,7 +97,7 @@
             // 
             this.btn_sifre.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_sifre.Location = new System.Drawing.Point(19, 61);
+            this.btn_sifre.Location = new System.Drawing.Point(20, 105);
             this.btn_sifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_sifre.Name = "btn_sifre";
             this.btn_sifre.Size = new System.Drawing.Size(104, 24);
@@ -107,7 +109,7 @@
             // 
             this.txtSifre.BackColor = System.Drawing.Color.IndianRed;
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(152, 61);
+            this.txtSifre.Location = new System.Drawing.Point(153, 105);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(2);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(191, 26);
@@ -117,10 +119,10 @@
             // btn_yonetici
             // 
             this.btn_yonetici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_yonetici.Location = new System.Drawing.Point(665, 356);
+            this.btn_yonetici.Location = new System.Drawing.Point(745, 375);
             this.btn_yonetici.Margin = new System.Windows.Forms.Padding(2);
             this.btn_yonetici.Name = "btn_yonetici";
-            this.btn_yonetici.Size = new System.Drawing.Size(234, 33);
+            this.btn_yonetici.Size = new System.Drawing.Size(234, 37);
             this.btn_yonetici.TabIndex = 11;
             this.btn_yonetici.Text = "Yönetici Girişi için Tıklayın";
             this.btn_yonetici.UseVisualStyleBackColor = true;
@@ -130,7 +132,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(149, 109);
+            this.label3.Location = new System.Drawing.Point(150, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 27);
@@ -148,42 +150,55 @@
             this.groupBox1.Controls.Add(this.btn_Eposta);
             this.groupBox1.Controls.Add(this.btn_uye);
             this.groupBox1.Controls.Add(this.btn_giris);
-            this.groupBox1.Location = new System.Drawing.Point(609, 149);
+            this.groupBox1.Location = new System.Drawing.Point(670, 124);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 180);
+            this.groupBox1.Size = new System.Drawing.Size(358, 213);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kullanıcı Girişi";
             // 
             // groupBox2
             // 
             this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
-            this.groupBox2.Location = new System.Drawing.Point(76, 116);
+            this.groupBox2.Controls.Add(this.btn_Cikis);
+            this.groupBox2.Location = new System.Drawing.Point(3, 124);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 437);
+            this.groupBox2.Size = new System.Drawing.Size(666, 450);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(381, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
             // 
             // btn_Cikis
             // 
             this.btn_Cikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Cikis.Location = new System.Drawing.Point(751, 450);
+            this.btn_Cikis.Location = new System.Drawing.Point(533, 459);
             this.btn_Cikis.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cikis.Name = "btn_Cikis";
             this.btn_Cikis.Size = new System.Drawing.Size(110, 31);
             this.btn_Cikis.TabIndex = 16;
             this.btn_Cikis.Text = "Çıkış Yap";
             this.btn_Cikis.UseVisualStyleBackColor = true;
-            this.btn_Cikis.Click += new System.EventHandler(this.btn_Cikis_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(397, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 39);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Araç Kiralama";
+            // 
+            // btn_Cik
+            // 
+            this.btn_Cik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Cik.Location = new System.Drawing.Point(811, 478);
+            this.btn_Cik.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Cik.Name = "btn_Cik";
+            this.btn_Cik.Size = new System.Drawing.Size(92, 42);
+            this.btn_Cik.TabIndex = 16;
+            this.btn_Cik.Text = "Çıkış Yap";
+            this.btn_Cik.UseVisualStyleBackColor = true;
+            this.btn_Cik.Click += new System.EventHandler(this.btn_Cik_Click);
             // 
             // Form1
             // 
@@ -191,12 +206,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1032, 576);
-            this.Controls.Add(this.btn_Cikis);
+            this.ClientSize = new System.Drawing.Size(1040, 575);
+            this.Controls.Add(this.btn_Cik);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_yonetici);
+            this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,6 +219,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +238,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Cikis;
+        private System.Windows.Forms.Button btn_Cik;
     }
 }
 

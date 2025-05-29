@@ -51,5 +51,26 @@ namespace Arac_kiralama
         {
             Application.Exit();
         }
+
+        private void btn_aracekle_Click(object sender, EventArgs e)
+        {
+            YeniAracEkle yeniAracEkle = new YeniAracEkle(_yoneticiId, _yoneticiAd);
+            yeniAracEkle.Show();
+            this.Hide();
+        }
+
+        private void btn_uyeler_Click(object sender, EventArgs e)
+        {
+            Uyeler uyelerForm = new Uyeler(_yoneticiId, _yoneticiAd);
+            uyelerForm.Show();
+            this.Hide();
+        }
+
+        private void btn_sifredegistir_Click(object sender, EventArgs e)
+        {
+            YoneticiSifreDegistirme yoneticiSifreDegistirme = new YoneticiSifreDegistirme(_yoneticiId, _yoneticiAd);
+            yoneticiSifreDegistirme.Show();
+            this.Hide();
+        }
     }
 }

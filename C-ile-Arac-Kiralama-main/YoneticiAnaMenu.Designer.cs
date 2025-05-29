@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YoneticiAnaMenu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_saat = new System.Windows.Forms.Label();
             this.lbl_isim = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timerSaat = new System.Windows.Forms.Timer(this.components);
@@ -41,7 +42,6 @@
             this.btn_sifredegistir = new System.Windows.Forms.Button();
             this.btn_uyeler = new System.Windows.Forms.Button();
             this.btn_Cikis = new System.Windows.Forms.Button();
-            this.label_saat = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,15 @@
             this.groupBox1.Size = new System.Drawing.Size(793, 60);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label_saat
+            // 
+            this.label_saat.AutoSize = true;
+            this.label_saat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_saat.Location = new System.Drawing.Point(595, 20);
+            this.label_saat.Name = "label_saat";
+            this.label_saat.Size = new System.Drawing.Size(0, 20);
+            this.label_saat.TabIndex = 1;
             // 
             // lbl_isim
             // 
@@ -99,6 +108,7 @@
             this.btn_aracekle.TabIndex = 3;
             this.btn_aracekle.Text = "Yeni Araç Ekle";
             this.btn_aracekle.UseVisualStyleBackColor = true;
+            this.btn_aracekle.Click += new System.EventHandler(this.btn_aracekle_Click);
             // 
             // btn_sifredegistir
             // 
@@ -109,6 +119,7 @@
             this.btn_sifredegistir.TabIndex = 4;
             this.btn_sifredegistir.Text = "Şifre Değiştir";
             this.btn_sifredegistir.UseVisualStyleBackColor = true;
+            this.btn_sifredegistir.Click += new System.EventHandler(this.btn_sifredegistir_Click);
             // 
             // btn_uyeler
             // 
@@ -119,6 +130,7 @@
             this.btn_uyeler.TabIndex = 5;
             this.btn_uyeler.Text = "Uyeler";
             this.btn_uyeler.UseVisualStyleBackColor = true;
+            this.btn_uyeler.Click += new System.EventHandler(this.btn_uyeler_Click);
             // 
             // btn_Cikis
             // 
@@ -130,15 +142,6 @@
             this.btn_Cikis.Text = "Çıkış Yap";
             this.btn_Cikis.UseVisualStyleBackColor = true;
             this.btn_Cikis.Click += new System.EventHandler(this.btn_Cikis_Click);
-            // 
-            // label_saat
-            // 
-            this.label_saat.AutoSize = true;
-            this.label_saat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_saat.Location = new System.Drawing.Point(595, 20);
-            this.label_saat.Name = "label_saat";
-            this.label_saat.Size = new System.Drawing.Size(0, 20);
-            this.label_saat.TabIndex = 1;
             // 
             // YoneticiAnaMenu
             // 
