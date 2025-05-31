@@ -46,9 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chkKmFiltrele = new System.Windows.Forms.CheckBox();
             this.nudKm = new System.Windows.Forms.NumericUpDown();
-            this.dgvSonuclar = new System.Windows.Forms.DataGridView();
             this.btnAra = new System.Windows.Forms.Button();
-            this.btn_kirala = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_geridon = new System.Windows.Forms.Button();
@@ -58,7 +56,6 @@
             this.groupBoxYakit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSonuclar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,23 +63,25 @@
             // comboBoxSehir
             // 
             this.comboBoxSehir.FormattingEnabled = true;
-            this.comboBoxSehir.Location = new System.Drawing.Point(23, 48);
+            this.comboBoxSehir.Location = new System.Drawing.Point(195, 59);
             this.comboBoxSehir.Name = "comboBoxSehir";
-            this.comboBoxSehir.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSehir.Size = new System.Drawing.Size(129, 21);
             this.comboBoxSehir.TabIndex = 0;
             // 
             // dateTimePickerBaslangic
             // 
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(12, 81);
+            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(363, 58);
             this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
-            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(232, 24);
+            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(232, 22);
             this.dateTimePickerBaslangic.TabIndex = 1;
             // 
             // dateTimePickerBitis
             // 
-            this.dateTimePickerBitis.Location = new System.Drawing.Point(10, 160);
+            this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateTimePickerBitis.Location = new System.Drawing.Point(656, 58);
             this.dateTimePickerBitis.Name = "dateTimePickerBitis";
-            this.dateTimePickerBitis.Size = new System.Drawing.Size(226, 24);
+            this.dateTimePickerBitis.Size = new System.Drawing.Size(226, 22);
             this.dateTimePickerBitis.TabIndex = 2;
             // 
             // groupBoxVites
@@ -92,9 +91,9 @@
             this.groupBoxVites.Controls.Add(this.cb_otomatik);
             this.groupBoxVites.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxVites.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBoxVites.Location = new System.Drawing.Point(770, 83);
+            this.groupBoxVites.Location = new System.Drawing.Point(482, 60);
             this.groupBoxVites.Name = "groupBoxVites";
-            this.groupBoxVites.Size = new System.Drawing.Size(234, 81);
+            this.groupBoxVites.Size = new System.Drawing.Size(320, 79);
             this.groupBoxVites.TabIndex = 3;
             this.groupBoxVites.TabStop = false;
             this.groupBoxVites.Text = "Vites türü";
@@ -128,7 +127,7 @@
             this.groupBoxYakit.Controls.Add(this.cb_benzin);
             this.groupBoxYakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxYakit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBoxYakit.Location = new System.Drawing.Point(264, 83);
+            this.groupBoxYakit.Location = new System.Drawing.Point(6, 60);
             this.groupBoxYakit.Name = "groupBoxYakit";
             this.groupBoxYakit.Size = new System.Drawing.Size(470, 81);
             this.groupBoxYakit.TabIndex = 4;
@@ -177,7 +176,7 @@
             // 
             // nudFiyat
             // 
-            this.nudFiyat.Location = new System.Drawing.Point(270, 230);
+            this.nudFiyat.Location = new System.Drawing.Point(30, 175);
             this.nudFiyat.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -191,7 +190,7 @@
             // 
             this.chkFiyatFiltrele.AutoSize = true;
             this.chkFiyatFiltrele.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkFiyatFiltrele.Location = new System.Drawing.Point(270, 202);
+            this.chkFiyatFiltrele.Location = new System.Drawing.Point(30, 147);
             this.chkFiyatFiltrele.Name = "chkFiyatFiltrele";
             this.chkFiyatFiltrele.Size = new System.Drawing.Size(167, 22);
             this.chkFiyatFiltrele.TabIndex = 6;
@@ -201,10 +200,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(31, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(191, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Şehir Seçiniz";
             // 
@@ -212,7 +211,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(11, 58);
+            this.label2.Location = new System.Drawing.Point(362, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 8;
@@ -222,7 +221,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(11, 131);
+            this.label3.Location = new System.Drawing.Point(665, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 9;
@@ -232,7 +231,7 @@
             // 
             this.chkKmFiltrele.AutoSize = true;
             this.chkKmFiltrele.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkKmFiltrele.Location = new System.Drawing.Point(531, 202);
+            this.chkKmFiltrele.Location = new System.Drawing.Point(291, 147);
             this.chkKmFiltrele.Name = "chkKmFiltrele";
             this.chkKmFiltrele.Size = new System.Drawing.Size(203, 22);
             this.chkKmFiltrele.TabIndex = 11;
@@ -241,7 +240,7 @@
             // 
             // nudKm
             // 
-            this.nudKm.Location = new System.Drawing.Point(531, 230);
+            this.nudKm.Location = new System.Drawing.Point(291, 175);
             this.nudKm.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -251,21 +250,10 @@
             this.nudKm.Size = new System.Drawing.Size(165, 24);
             this.nudKm.TabIndex = 10;
             // 
-            // dgvSonuclar
-            // 
-            this.dgvSonuclar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSonuclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSonuclar.Location = new System.Drawing.Point(9, 365);
-            this.dgvSonuclar.Name = "dgvSonuclar";
-            this.dgvSonuclar.ReadOnly = true;
-            this.dgvSonuclar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSonuclar.Size = new System.Drawing.Size(754, 136);
-            this.dgvSonuclar.TabIndex = 12;
-            // 
             // btnAra
             // 
             this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.Location = new System.Drawing.Point(812, 225);
+            this.btnAra.Location = new System.Drawing.Point(558, 166);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(147, 33);
             this.btnAra.TabIndex = 13;
@@ -273,54 +261,39 @@
             this.btnAra.UseVisualStyleBackColor = true;
             this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
-            // btn_kirala
-            // 
-            this.btn_kirala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_kirala.Location = new System.Drawing.Point(12, 507);
-            this.btn_kirala.Name = "btn_kirala";
-            this.btn_kirala.Size = new System.Drawing.Size(183, 33);
-            this.btn_kirala.TabIndex = 14;
-            this.btn_kirala.Text = "Seçilen Aracı Kirala";
-            this.btn_kirala.UseVisualStyleBackColor = true;
-            this.btn_kirala.Click += new System.EventHandler(this.btn_kirala_Click);
-            // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnAra);
             this.groupBox1.Controls.Add(this.nudKm);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.chkKmFiltrele);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.groupBoxYakit);
             this.groupBox1.Controls.Add(this.chkFiyatFiltrele);
             this.groupBox1.Controls.Add(this.nudFiyat);
             this.groupBox1.Controls.Add(this.groupBoxVites);
-            this.groupBox1.Controls.Add(this.dateTimePickerBitis);
-            this.groupBox1.Controls.Add(this.dateTimePickerBaslangic);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(-1, 75);
+            this.groupBox1.Location = new System.Drawing.Point(-1, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1052, 279);
+            this.groupBox1.Size = new System.Drawing.Size(1052, 226);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(6, 16);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(380, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 20);
+            this.label4.Size = new System.Drawing.Size(265, 29);
             this.label4.TabIndex = 14;
             this.label4.Text = "İsteğe Bağlı Tercihler";
             // 
             // btn_geridon
             // 
             this.btn_geridon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_geridon.Location = new System.Drawing.Point(640, 16);
+            this.btn_geridon.Location = new System.Drawing.Point(0, -1);
             this.btn_geridon.Name = "btn_geridon";
             this.btn_geridon.Size = new System.Drawing.Size(183, 33);
             this.btn_geridon.TabIndex = 16;
@@ -331,7 +304,7 @@
             // btn_cikis
             // 
             this.btn_cikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_cikis.Location = new System.Drawing.Point(846, 16);
+            this.btn_cikis.Location = new System.Drawing.Point(869, 0);
             this.btn_cikis.Name = "btn_cikis";
             this.btn_cikis.Size = new System.Drawing.Size(183, 33);
             this.btn_cikis.TabIndex = 17;
@@ -341,14 +314,18 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.RosyBrown;
-            this.groupBox2.Controls.Add(this.btn_geridon);
+            this.groupBox2.BackColor = System.Drawing.Color.DarkGray;
             this.groupBox2.Controls.Add(this.btn_cikis);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btn_geridon);
             this.groupBox2.Controls.Add(this.comboBoxSehir);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dateTimePickerBaslangic);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.dateTimePickerBitis);
             this.groupBox2.Location = new System.Drawing.Point(-1, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1052, 78);
+            this.groupBox2.Size = new System.Drawing.Size(1052, 100);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
@@ -356,11 +333,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 637);
+            this.ClientSize = new System.Drawing.Size(1112, 748);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_kirala);
-            this.Controls.Add(this.dgvSonuclar);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -370,7 +345,6 @@
             this.groupBoxYakit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSonuclar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -393,9 +367,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chkKmFiltrele;
         private System.Windows.Forms.NumericUpDown nudKm;
-        private System.Windows.Forms.DataGridView dgvSonuclar;
         private System.Windows.Forms.Button btnAra;
-        private System.Windows.Forms.Button btn_kirala;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_geridon;
         private System.Windows.Forms.Button btn_cikis;

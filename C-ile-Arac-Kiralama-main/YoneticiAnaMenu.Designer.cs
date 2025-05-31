@@ -42,6 +42,7 @@
             this.btn_sifredegistir = new System.Windows.Forms.Button();
             this.btn_uyeler = new System.Windows.Forms.Button();
             this.btn_Cikis = new System.Windows.Forms.Button();
+            this.btn_harita = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,12 +144,24 @@
             this.btn_Cikis.UseVisualStyleBackColor = true;
             this.btn_Cikis.Click += new System.EventHandler(this.btn_Cikis_Click);
             // 
+            // btn_harita
+            // 
+            this.btn_harita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_harita.Location = new System.Drawing.Point(101, 358);
+            this.btn_harita.Name = "btn_harita";
+            this.btn_harita.Size = new System.Drawing.Size(106, 35);
+            this.btn_harita.TabIndex = 7;
+            this.btn_harita.Text = "Harita";
+            this.btn_harita.UseVisualStyleBackColor = true;
+            this.btn_harita.Click += new System.EventHandler(this.btn_harita_Click);
+            // 
             // YoneticiAnaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_harita);
             this.Controls.Add(this.btn_Cikis);
             this.Controls.Add(this.btn_uyeler);
             this.Controls.Add(this.btn_sifredegistir);
@@ -180,5 +193,6 @@
         private System.Windows.Forms.Button btn_uyeler;
         private System.Windows.Forms.Button btn_Cikis;
         private System.Windows.Forms.Label label_saat;
+        private System.Windows.Forms.Button btn_harita;
     }
 }

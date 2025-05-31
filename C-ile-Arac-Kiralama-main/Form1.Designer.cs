@@ -49,7 +49,7 @@
             // btn_giris
             // 
             this.btn_giris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_giris.Location = new System.Drawing.Point(46, 155);
+            this.btn_giris.Location = new System.Drawing.Point(34, 127);
             this.btn_giris.Margin = new System.Windows.Forms.Padding(2);
             this.btn_giris.Name = "btn_giris";
             this.btn_giris.Size = new System.Drawing.Size(87, 27);
@@ -61,7 +61,7 @@
             // btn_uye
             // 
             this.btn_uye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_uye.Location = new System.Drawing.Point(213, 155);
+            this.btn_uye.Location = new System.Drawing.Point(201, 127);
             this.btn_uye.Margin = new System.Windows.Forms.Padding(2);
             this.btn_uye.Name = "btn_uye";
             this.btn_uye.Size = new System.Drawing.Size(80, 27);
@@ -74,7 +74,7 @@
             // 
             this.btn_Eposta.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_Eposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Eposta.Location = new System.Drawing.Point(22, 62);
+            this.btn_Eposta.Location = new System.Drawing.Point(10, 34);
             this.btn_Eposta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_Eposta.Name = "btn_Eposta";
             this.btn_Eposta.Size = new System.Drawing.Size(102, 27);
@@ -87,7 +87,7 @@
             this.txtEposta.BackColor = System.Drawing.Color.IndianRed;
             this.txtEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEposta.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEposta.Location = new System.Drawing.Point(153, 62);
+            this.txtEposta.Location = new System.Drawing.Point(141, 34);
             this.txtEposta.Margin = new System.Windows.Forms.Padding(2);
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.Size = new System.Drawing.Size(191, 26);
@@ -97,7 +97,7 @@
             // 
             this.btn_sifre.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_sifre.Location = new System.Drawing.Point(20, 105);
+            this.btn_sifre.Location = new System.Drawing.Point(8, 77);
             this.btn_sifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btn_sifre.Name = "btn_sifre";
             this.btn_sifre.Size = new System.Drawing.Size(104, 24);
@@ -109,7 +109,7 @@
             // 
             this.txtSifre.BackColor = System.Drawing.Color.IndianRed;
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(153, 105);
+            this.txtSifre.Location = new System.Drawing.Point(141, 77);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(2);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(191, 26);
@@ -119,7 +119,7 @@
             // btn_yonetici
             // 
             this.btn_yonetici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_yonetici.Location = new System.Drawing.Point(745, 375);
+            this.btn_yonetici.Location = new System.Drawing.Point(737, 349);
             this.btn_yonetici.Margin = new System.Windows.Forms.Padding(2);
             this.btn_yonetici.Name = "btn_yonetici";
             this.btn_yonetici.Size = new System.Drawing.Size(234, 37);
@@ -132,7 +132,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(150, 153);
+            this.label3.Location = new System.Drawing.Point(138, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 27);
@@ -152,7 +152,7 @@
             this.groupBox1.Controls.Add(this.btn_giris);
             this.groupBox1.Location = new System.Drawing.Point(670, 124);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 213);
+            this.groupBox1.Size = new System.Drawing.Size(358, 190);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
@@ -191,7 +191,7 @@
             // btn_Cik
             // 
             this.btn_Cik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Cik.Location = new System.Drawing.Point(811, 478);
+            this.btn_Cik.Location = new System.Drawing.Point(802, 436);
             this.btn_Cik.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cik.Name = "btn_Cik";
             this.btn_Cik.Size = new System.Drawing.Size(92, 42);

@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +52,15 @@
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
@@ -98,6 +109,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AracDetayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracDetayForm.Designer.cs">
+      <DependentUpon>AracDetayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BireyselUyeOl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +133,29 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Harita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Harita.Designer.cs">
+      <DependentUpon>Harita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiralamaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiralamaForm.Designer.cs">
+      <DependentUpon>KiralamaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kiralamaİptal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kiralamaİptal.Designer.cs">
       <DependentUpon>Kiralamaİptal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciHarita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciHarita.Designer.cs">
+      <DependentUpon>KullaniciHarita.cs</DependentUpon>
     </Compile>
     <Compile Include="MevcutKiralamalar.cs">
       <SubType>Form</SubType>
@@ -191,6 +226,9 @@
     <Compile Include="YoneticiSifreDegistirme.Designer.cs">
       <DependentUpon>YoneticiSifreDegistirme.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AracDetayForm.resx">
+      <DependentUpon>AracDetayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BireyselUyeOl.resx">
       <DependentUpon>BireyselUyeOl.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,8 +241,17 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Harita.resx">
+      <DependentUpon>Harita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiralamaForm.resx">
+      <DependentUpon>KiralamaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kiralamaİptal.resx">
       <DependentUpon>Kiralamaİptal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciHarita.resx">
+      <DependentUpon>KullaniciHarita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MevcutKiralamalar.resx">
       <DependentUpon>MevcutKiralamalar.cs</DependentUpon>
@@ -260,4 +307,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
 </Project>

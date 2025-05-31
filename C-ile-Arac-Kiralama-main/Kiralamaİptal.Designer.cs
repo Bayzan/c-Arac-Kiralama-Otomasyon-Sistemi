@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kiralamaİptal));
             this.label1 = new System.Windows.Forms.Label();
-            this.gb_iptalet = new System.Windows.Forms.GroupBox();
             this.btn_iptalet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -39,22 +38,13 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Location = new System.Drawing.Point(127, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 33);
+            this.label1.Size = new System.Drawing.Size(576, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "İptal Etmek istediğiniz Aracı Seçin";
-            // 
-            // gb_iptalet
-            // 
-            this.gb_iptalet.BackColor = System.Drawing.Color.Transparent;
-            this.gb_iptalet.Location = new System.Drawing.Point(13, 103);
-            this.gb_iptalet.Name = "gb_iptalet";
-            this.gb_iptalet.Size = new System.Drawing.Size(738, 229);
-            this.gb_iptalet.TabIndex = 1;
-            this.gb_iptalet.TabStop = false;
             // 
             // btn_iptalet
             // 
@@ -73,7 +63,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_iptalet);
-            this.Controls.Add(this.gb_iptalet);
             this.Controls.Add(this.label1);
             this.Name = "Kiralamaİptal";
             this.Text = "Kiralamaİptal";
@@ -85,7 +74,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gb_iptalet;
         private System.Windows.Forms.Button btn_iptalet;
     }
 }

@@ -36,6 +36,7 @@
             this.btn_cikis = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gb_mevcut_araclarım = new System.Windows.Forms.GroupBox();
+            this.btn_gerigel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_arackirala
@@ -53,9 +54,9 @@
             // btn_kiralamalarım
             // 
             this.btn_kiralamalarım.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_kiralamalarım.Location = new System.Drawing.Point(156, 80);
+            this.btn_kiralamalarım.Location = new System.Drawing.Point(283, 82);
             this.btn_kiralamalarım.Name = "btn_kiralamalarım";
-            this.btn_kiralamalarım.Size = new System.Drawing.Size(232, 34);
+            this.btn_kiralamalarım.Size = new System.Drawing.Size(232, 30);
             this.btn_kiralamalarım.TabIndex = 1;
             this.btn_kiralamalarım.Text = "Araç Kiralalamalarım";
             this.btn_kiralamalarım.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             // 
             this.btn_sifredegistir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_sifredegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_sifredegistir.Location = new System.Drawing.Point(416, 80);
+            this.btn_sifredegistir.Location = new System.Drawing.Point(635, 80);
             this.btn_sifredegistir.Name = "btn_sifredegistir";
             this.btn_sifredegistir.Size = new System.Drawing.Size(129, 34);
             this.btn_sifredegistir.TabIndex = 2;
@@ -76,7 +77,7 @@
             // btn_iptal
             // 
             this.btn_iptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_iptal.Location = new System.Drawing.Point(593, 78);
+            this.btn_iptal.Location = new System.Drawing.Point(914, 86);
             this.btn_iptal.Name = "btn_iptal";
             this.btn_iptal.Size = new System.Drawing.Size(160, 34);
             this.btn_iptal.TabIndex = 3;
@@ -88,7 +89,7 @@
             // 
             this.btn_cikis.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btn_cikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_cikis.Location = new System.Drawing.Point(666, 450);
+            this.btn_cikis.Location = new System.Drawing.Point(914, 520);
             this.btn_cikis.Name = "btn_cikis";
             this.btn_cikis.Size = new System.Drawing.Size(136, 37);
             this.btn_cikis.TabIndex = 4;
@@ -102,7 +103,7 @@
             this.label1.BackColor = System.Drawing.Color.Bisque;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(122, 24);
+            this.label1.Location = new System.Drawing.Point(277, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(569, 33);
             this.label1.TabIndex = 5;
@@ -115,10 +116,21 @@
             this.gb_mevcut_araclarım.ForeColor = System.Drawing.Color.RoyalBlue;
             this.gb_mevcut_araclarım.Location = new System.Drawing.Point(12, 126);
             this.gb_mevcut_araclarım.Name = "gb_mevcut_araclarım";
-            this.gb_mevcut_araclarım.Size = new System.Drawing.Size(721, 151);
+            this.gb_mevcut_araclarım.Size = new System.Drawing.Size(1095, 298);
             this.gb_mevcut_araclarım.TabIndex = 6;
             this.gb_mevcut_araclarım.TabStop = false;
-            this.gb_mevcut_araclarım.Text = "Mevcut Araç Kiralamalarım";
+            // 
+            // btn_gerigel
+            // 
+            this.btn_gerigel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn_gerigel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_gerigel.Location = new System.Drawing.Point(55, 522);
+            this.btn_gerigel.Name = "btn_gerigel";
+            this.btn_gerigel.Size = new System.Drawing.Size(230, 35);
+            this.btn_gerigel.TabIndex = 7;
+            this.btn_gerigel.Text = "Giriş Sayfasına Dön";
+            this.btn_gerigel.UseVisualStyleBackColor = false;
+            this.btn_gerigel.Click += new System.EventHandler(this.btn_gerigel_Click);
             // 
             // Form3
             // 
@@ -126,7 +138,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(814, 499);
+            this.ClientSize = new System.Drawing.Size(1105, 581);
+            this.Controls.Add(this.btn_gerigel);
             this.Controls.Add(this.gb_mevcut_araclarım);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_cikis);
@@ -150,5 +163,6 @@
         private System.Windows.Forms.Button btn_cikis;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gb_mevcut_araclarım;
+        private System.Windows.Forms.Button btn_gerigel;
     }
 }

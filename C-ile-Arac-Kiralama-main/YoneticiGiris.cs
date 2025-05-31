@@ -80,5 +80,10 @@ namespace Arac_kiralama
         {
             Application.Exit(); // Uygulamayı kapatır
         }
+
+        private void YoneticiGiris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

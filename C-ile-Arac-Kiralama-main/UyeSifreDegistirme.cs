@@ -58,7 +58,7 @@ namespace Arac_kiralama
                     guncelleKomut.ExecuteNonQuery();
 
                     MessageBox.Show("Şifre başarıyla güncellendi.");
-                    this.Close();
+                    //this.Close();
                 }
                 catch (Exception ex)
                 {

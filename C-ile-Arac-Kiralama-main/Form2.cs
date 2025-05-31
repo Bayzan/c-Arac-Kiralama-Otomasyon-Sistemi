@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arac_kiralama.Arac_kiralama;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Arac_kiralama
 {
@@ -16,6 +17,7 @@ namespace Arac_kiralama
     {
         private int kullaniciID;
         private string uyeTipi; // "bireysel" veya "ticari"
+        private FlowLayoutPanel panelAraclar; // Araç resimlerini gösterecek panel
 
         public Form2(int kullaniciID, string uyeTipi)
         {
@@ -23,6 +25,23 @@ namespace Arac_kiralama
             this.kullaniciID = kullaniciID;
             this.uyeTipi = uyeTipi;
 
+            // FlowLayoutPanel oluştur (eğer tasarımda yoksa)
+            InitializeAraclarPanel();
+        }
+
+        private void InitializeAraclarPanel()
+        {
+            // Eğer panelAraclar tasarımda yoksa burada oluşturun
+            if (panelAraclar == null)
+            {
+                panelAraclar = new FlowLayoutPanel();
+                panelAraclar.AutoScroll = true;
+                panelAraclar.FlowDirection = FlowDirection.LeftToRight;
+                panelAraclar.WrapContents = true;
+                panelAraclar.Dock = DockStyle.Bottom;
+                panelAraclar.Height = 400; // veya istediğiniz boyut
+                this.Controls.Add(panelAraclar);
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -39,10 +58,10 @@ namespace Arac_kiralama
             DateTime yarin = bugun.AddDays(1);
 
             dateTimePickerBaslangic.MinDate = bugun;
-            dateTimePickerBaslangic.MaxDate = bugun.AddDays(2); // En fazla 3 günlük kiralama için başlangıç tarihi
+            dateTimePickerBaslangic.MaxDate = bugun.AddDays(2);
 
             dateTimePickerBitis.MinDate = yarin;
-            dateTimePickerBitis.MaxDate = bugun.AddDays(3); // 3 gün sınırı
+            dateTimePickerBitis.MaxDate = bugun.AddDays(3);
 
             dateTimePickerBaslangic.Value = bugun;
             dateTimePickerBitis.Value = yarin;
@@ -50,13 +69,16 @@ namespace Arac_kiralama
 
         private void btnAra_Click(object sender, EventArgs e)
         {
+            // Önceki araç resimlerini temizle
+            panelAraclar.Controls.Clear();
+
             using (MySqlConnection baglanti = Veritabani.BaglantiOlustur())
             {
                 try
                 {
                     baglanti.Open();
 
-                    string query = "SELECT * FROM araclar WHERE sehir = @sehir";
+                    string query = "SELECT aracID, marka, model, yil, resim_yolu, gunluk_ucret FROM araclar WHERE sehir = @sehir";
 
                     if (chkFiyatFiltrele.Checked)
                         query += " AND gunluk_ucret <= @fiyat";
@@ -92,18 +114,19 @@ namespace Arac_kiralama
                     if (chkKmFiltrele.Checked)
                         komut.Parameters.AddWithValue("@km", nudKm.Value);
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(komut);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    MySqlDataReader reader = komut.ExecuteReader();
 
-                    if (dt.Rows.Count == 0)
+                    bool aracBulundu = false;
+                    while (reader.Read())
+                    {
+                        aracBulundu = true;
+                        AracResimKartiOlustur(reader);
+                    }
+
+                    if (!aracBulundu)
                     {
                         MessageBox.Show("Uygun araç bulunamadı.");
                     }
-
-                    dgvSonuclar.AutoGenerateColumns = true;
-                    dgvSonuclar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dgvSonuclar.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
@@ -112,73 +135,91 @@ namespace Arac_kiralama
             }
         }
 
-        private void btn_kirala_Click(object sender, EventArgs e)
+        private void AracResimKartiOlustur(MySqlDataReader reader)
         {
-            if (dgvSonuclar.SelectedRows.Count == 0)
+            // Ana panel (araç kartı)
+            Panel aracKarti = new Panel();
+            aracKarti.Size = new Size(200, 250);
+            aracKarti.BorderStyle = BorderStyle.FixedSingle;
+            aracKarti.Margin = new Padding(10);
+            aracKarti.BackColor = Color.White;
+
+            // Araç resmi
+            PictureBox pictureBox = new PictureBox();
+            pictureBox.Size = new Size(180, 120);
+            pictureBox.Location = new Point(10, 10);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox.BorderStyle = BorderStyle.FixedSingle;
+
+            // Resim yolunu al ve göster
+            string resimYolu = reader["resim_yolu"].ToString();
+            if (!string.IsNullOrEmpty(resimYolu) && File.Exists(resimYolu))
             {
-                MessageBox.Show("Lütfen kiralamak istediğiniz aracı seçiniz.");
-                return;
+                try
+                {
+                    pictureBox.Image = Image.FromFile(resimYolu);
+                }
+                catch
+                {
+                    // Varsayılan araç resmi veya boş
+                    pictureBox.BackColor = Color.LightGray;
+                    pictureBox.Text = "Resim Yok";
+                }
+            }
+            else
+            {
+                pictureBox.BackColor = Color.LightGray;
+                pictureBox.Text = "Resim Yok";
             }
 
+            // Araç bilgileri
+            string marka = reader["marka"].ToString();
+            string model = reader["model"].ToString();
+            string yil = reader["yil"].ToString();
+            decimal gunlukUcret = Convert.ToDecimal(reader["gunluk_ucret"]);
+            int aracID = Convert.ToInt32(reader["aracID"]);
+
+            Label lblBilgi = new Label();
+            lblBilgi.Text = $"{marka} {model}\n{yil} Model\n{gunlukUcret:C} / Gün";
+            lblBilgi.Location = new Point(10, 140);
+            lblBilgi.Size = new Size(180, 60);
+            lblBilgi.TextAlign = ContentAlignment.MiddleCenter;
+            lblBilgi.Font = new Font("Arial", 9, FontStyle.Bold);
+
+            // Detay butonu
+            Button btnDetay = new Button();
+            btnDetay.Text = "Detayları Gör";
+            btnDetay.Location = new Point(50, 210);
+            btnDetay.Size = new Size(100, 30);
+            btnDetay.BackColor = Color.LightBlue;
+            btnDetay.Tag = aracID; // Araç ID'sini tag'e koy
+
+            // Click event'i
+            btnDetay.Click += (sender, e) =>
+            {
+                Button btn = sender as Button;
+                int selectedAracID = (int)btn.Tag;
+                AracDetayFormunuAc(selectedAracID);
+            };
+
+            // Kontrolları karta ekle
+            aracKarti.Controls.Add(pictureBox);
+            aracKarti.Controls.Add(lblBilgi);
+            aracKarti.Controls.Add(btnDetay);
+
+            // Kartı ana panele ekle
+            panelAraclar.Controls.Add(aracKarti);
+        }
+
+        private void AracDetayFormunuAc(int aracID)
+        {
             DateTime baslangic = dateTimePickerBaslangic.Value.Date;
             DateTime bitis = dateTimePickerBitis.Value.Date;
 
-            if (bitis <= baslangic)
-            {
-                MessageBox.Show("Bitiş tarihi başlangıç tarihinden sonra olmalıdır.");
-                return;
-            }
-
-            if ((bitis - baslangic).TotalDays > 3)
-            {
-                MessageBox.Show("Araç en fazla 3 gün kiralanabilir.");
-                return;
-            }
-
-            try
-            {
-                int secilenAracID = Convert.ToInt32(dgvSonuclar.SelectedRows[0].Cells["aracID"].Value);
-
-                using (MySqlConnection baglanti = Veritabani.BaglantiOlustur())
-                {
-                    baglanti.Open();
-
-                    string kontrolQuery = @"
-                        SELECT COUNT(*) FROM kiralamalar 
-                        WHERE arac_id = @aracID AND (@baslangic < bitis_tarihi AND @bitis > baslangic_tarihi)";
-
-                    MySqlCommand kontrolCmd = new MySqlCommand(kontrolQuery, baglanti);
-                    kontrolCmd.Parameters.AddWithValue("@aracID", secilenAracID);
-                    kontrolCmd.Parameters.AddWithValue("@baslangic", baslangic);
-                    kontrolCmd.Parameters.AddWithValue("@bitis", bitis);
-
-                    int mevcutKiralama = Convert.ToInt32(kontrolCmd.ExecuteScalar());
-
-                    if (mevcutKiralama > 0)
-                    {
-                        MessageBox.Show("Seçtiğiniz tarihlerde bu araç zaten kiralanmış.");
-                        return;
-                    }
-
-                    string insertQuery = @"
-                        INSERT INTO kiralamalar (arac_id, kullanici_id, baslangic_tarihi, bitis_tarihi)
-                        VALUES (@aracID, @kullaniciID, @baslangic, @bitis)";
-
-                    MySqlCommand insertCmd = new MySqlCommand(insertQuery, baglanti);
-                    insertCmd.Parameters.AddWithValue("@aracID", secilenAracID);
-                    insertCmd.Parameters.AddWithValue("@kullaniciID", kullaniciID);
-                    insertCmd.Parameters.AddWithValue("@baslangic", baslangic);
-                    insertCmd.Parameters.AddWithValue("@bitis", bitis);
-
-                    insertCmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Araç başarıyla kiralandı.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata oluştu: " + ex.Message);
-            }
+            // Yeni detay formunu aç
+            AracDetayForm detayForm = new AracDetayForm(aracID, kullaniciID, uyeTipi, baslangic, bitis);
+            detayForm.Show();
+            this.Hide();
         }
 
         private void btn_cikis_Click(object sender, EventArgs e)
@@ -188,7 +229,7 @@ namespace Arac_kiralama
 
         private void btn_geridon_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(kullaniciID,uyeTipi);
+            Form3 form3 = new Form3(kullaniciID, uyeTipi);
             form3.Show();
             this.Hide();
         }

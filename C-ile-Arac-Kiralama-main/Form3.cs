@@ -107,7 +107,16 @@ namespace Arac_kiralama
 
         private void btn_iptal_Click(object sender, EventArgs e)
         {
+            //Kiralamaİptal kiralamaİptal = new Kiralamaİptal(kullaniciID, uyeTipi);
+           // kiralamaİptal.Show();
+            //this.Show();
+        }
 
+        private void btn_gerigel_Click(object sender, EventArgs e)
+        {
+            Form1 girisFormu = new Form1();
+            girisFormu.Show();
+            this.Hide(); // Mevcut formu gizle
         }
     }
 }

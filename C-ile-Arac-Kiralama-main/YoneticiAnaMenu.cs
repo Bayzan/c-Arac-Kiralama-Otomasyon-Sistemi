@@ -72,5 +72,12 @@ namespace Arac_kiralama
             yoneticiSifreDegistirme.Show();
             this.Hide();
         }
+
+        private void btn_harita_Click(object sender, EventArgs e)
+        {
+           Harita harita = new Harita(_yoneticiId,_yoneticiAd);
+           harita.Show();
+           this.Hide();
+        }
     }
 }
